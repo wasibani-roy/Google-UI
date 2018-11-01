@@ -1,3 +1,6 @@
+a{
+    text-decoration: none;
+}
 .ADC-top {
     top: 0;
 }
@@ -166,7 +169,67 @@ margin-left: 68px;
     flex: 0 0 50%;
     max-width: 50%;
 }
+.w3-after{
+    /*text-align: center;*/
+    margin-left: 25%;
+}
+.w3-after1{
+    text-align: center;
+    margin-top: 25px;
+}
+a.luga{
+    padding: 10px 10px;
+}
+a.luo{
+    padding: 10px 10px;
+}
+a.kiswa{
+    padding: 10px 10px;
+}
+a.ikin{
+    padding: 10px 10px;
+}
+a.runya{
+    padding: 10px 10px;
+}
+button.button-primary1{
+    margin-right: 15px;
+background: #f3f3f3;
+color: #222;
+border: 1px solid #f3f3f3;
+padding: 10px 15px;
+text-decoration: none;
+font-size: 16px;
+}
+button.button-primary2{
+    
+    background: #f3f3f3;
+color: #222;
+border: 1px solid #f3f3f3;
+padding: 10px 15px;
+text-decoration: none;
+font-size: 16px;
+}
 @media (min-width:993px){
 	.ADC-modal-content{width:900px}
 .ADC-hide-large{display:none!important}
 .ADC-sidebar.ADC-collapse{display:block!important}}
+@media (max-width: 993px){
+    .imgrep{
+    margin-left: 0;
+    }
+    .form-control {
+    height: 40px;
+    width: 90%;
+    padding-left: 0;
+    margin-left: 0;
+    }
+    button.button-primary1 {
+    margin-right: 0;}
+    .w3-after {
+    margin-left: 0;
+    }
+    .ADC-bar .ADC-bar-item {
+        display: none;
+    }
+}
