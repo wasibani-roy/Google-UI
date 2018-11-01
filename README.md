@@ -1,7 +1,4 @@
 # Google-UI
-
-
-# Google-UI
 Google-UI mimicks the operation of the google search page most know to people as google home. Which system is used by most people when searching for different items
 
 ### Getting started
