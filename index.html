@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Google Search</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/search.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="ADC-top">
+  <div class="ADC-bar ADC-black ADC-card">
+    <a class="ADC-bar-item ADC-button ADC-padding-large ADC-hide-medium ADC-hide-large ADC-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="ADC-bar-item ADC-button ADC-padding-large ADC-right background">Signin</a>
+    <a href="#band" class="ADC-bar-item ADC-button ADC-padding-large ADC-hide-small ADC-right">Images</a>
+    <a href="#tour" class="ADC-bar-item ADC-button ADC-padding-large ADC-hide-small ADC-right">Gmail</a>
+    <a href="javascript:void(0)" class="ADC-padding-large ADC-hover-red ADC-hide-small ADC-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="ADC-bar-block ADC-black ADC-hide ADC-hide-large ADC-hide-medium ADC-top" style="margin-top:46px">
+  <a href="#band" class="ADC-bar-item ADC-button ADC-padding-large" onclick="myFunction()">BAND</a>
+  <a href="#tour" class="ADC-bar-item ADC-button ADC-padding-large" onclick="myFunction()">TOUR</a>
+  <a href="#contact" class="ADC-bar-item ADC-button ADC-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="#" class="ADC-bar-item ADC-button ADC-padding-large" onclick="myFunction()">MERCH</a>
+</div>
+
+<!-- Page content -->
+<div class="ADC-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div style="padding: 80px 0;"></div>
+
+
+  <!-- The Band Section -->
+  <div class="ADC-container ADC-content ADC-center ADC-padding-64" style="max-width:800px" id="band">
+  	<img src="images/googlelogo_color_272x92dp.png" class="imgrep"><br>
+    <input type="password" name= "search" id="search" class="form-control" placeholder="Search the Web"><br><div class="space-20"></div>
+    <p class="ADC-justify"><div class="button-row"><div class="button-col-6"><a href="" class="button-primary1">Google Search</a></div>  <div class="button-col-6"><a href="" class="button-primary2">I'm feeling lucky</a></div></div></p>
+
+  </div>
+  
+<!-- End Page Content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="ADC-container ADC-padding-64 ADC-center ADC-opacity ADC-light-grey ADC-xlarge">
+  <i class="fa fa-facebook-official ADC-hover-opacity"></i>
+  <i class="fa fa-instagram ADC-hover-opacity"></i>
+  <i class="fa fa-snapchat ADC-hover-opacity"></i>
+  <i class="fa fa-pinterest-p ADC-hover-opacity"></i>
+  <i class="fa fa-twitter ADC-hover-opacity"></i>
+  <i class="fa fa-linkedin ADC-hover-opacity"></i>
+  <!-- <p class="ADC-medium">Powered by <a href="default.html" target="_blank">ADC.css</a></p> -->
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("ADC-show") == -1) {
+        x.className += " ADC-show";
+    } else { 
+        x.className = x.className.replace(" ADC-show", "");
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
