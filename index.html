@@ -34,15 +34,16 @@ body {font-family: "Lato", sans-serif}
 <div class="ADC-content" style="max-width:2000px;margin-top:46px">
 
   <!-- Automatic Slideshow Images -->
-  <div style="padding: 80px 0;"></div>
+  <div style="padding: 60px 0;"></div>
 
 
   <!-- The Band Section -->
   <div class="ADC-container ADC-content ADC-center ADC-padding-64" style="max-width:800px" id="band">
   	<img src="images/googlelogo_color_272x92dp.png" class="imgrep"><br>
     <input type="text" name= "search" id="search" class="form-control" placeholder="Search the Web"><br><div class="space-20"></div>
-    <p class="w3-after"><button class="button-primary1" onclick="searchItem()">Google Search</button> <button type="submit" class="button-primary2">I'm feeling lucky</button></p>
-    <p class="w3-after1">Google offered in:  <a href="#" class="luga">Luganda</a> <a href="#" class="kiswa">Kiswahili</a><a href="#" class="ikin"> Ikinyarwanda</a> <a href="" class="luo">Luo</a> <a href="#" class="runya">Runyakitara</a></p>
+    <p class="ADC-after"><button class="button-primary1" onclick="searchItem()">Google Search</button> <button type="submit" class="button-primary2">I'm feeling lucky</button></p>
+    <p id="msg"></p>
+    <p class="ADC-after1">Google offered in:  <a href="#" class="luga">Luganda</a> <a href="#" class="kiswa">Kiswahili</a><a href="#" class="ikin"> Ikinyarwanda</a> <a href="" class="luo">Luo</a> <a href="#" class="runya">Runyakitara</a></p>
 
   </div>
   
@@ -52,12 +53,15 @@ body {font-family: "Lato", sans-serif}
 
 <!-- Footer -->
 <footer class="ADC-container ADC-padding-64 ADC-center ADC-opacity ADC-light-grey ADC-xlarge">
-  <i class="fa fa-facebook-official ADC-hover-opacity"></i>
-  <i class="fa fa-instagram ADC-hover-opacity"></i>
-  <i class="fa fa-snapchat ADC-hover-opacity"></i>
-  <i class="fa fa-pinterest-p ADC-hover-opacity"></i>
-  <i class="fa fa-twitter ADC-hover-opacity"></i>
-  <i class="fa fa-linkedin ADC-hover-opacity"></i>
+  <div class="ADC-footer1"><p class="ADC-medium">Uganda</p></div>
+  <div class="ADC-footer2"><a href="#" class="ADC-bar-item ADC-button ADC-padding-large">Advertising</a>
+    <a href="#band" class="ADC-bar-item ADC-button ADC-padding-large ADC-hide-small">Business</a>
+    <a href="#tour" class="ADC-bar-item ADC-button ADC-padding-large ADC-hide-small">About</a>
+    <a href="#" class="ADC-bar-item ADC-button ADC-padding-large ADC-right">Settings</a>
+    <a href="#band" class="ADC-bar-item ADC-button ADC-padding-large ADC-hide-small ADC-right">Terms</a>
+    <a href="#tour" class="ADC-bar-item ADC-button ADC-padding-large ADC-hide-small ADC-right">Privacy</a>
+    </div>
+    
   <!-- <p class="ADC-medium">Powered by <a href="default.html" target="_blank">ADC.css</a></p> -->
 </footer>
 
@@ -86,10 +90,15 @@ document.getElementById("myForm")
 			// console.log("try 1")
 			var x = document.getElementById('search').value;
 			if (x=="") {
-			  	window.alert("Error please enter a search parameter");
+			  	// window.alert("Error please enter a search parameter");
+			  	document.getElementById("msg").innerHTML="Error please enter a search parameter";
   }
-  else
+  else{
+  	document.getElementById("msg").style.display="none"
   	window.alert(x);
+  	
+  }
+  	
 }
 
 </script>
